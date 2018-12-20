@@ -14,6 +14,26 @@ document.addEventListener('DOMContentLoaded', () => {
   sideNav.addEventListener('click', showNote)
   noteBody.addEventListener('click', displayEditForm)
 
+  // placeHolder()
+  // function placeHolder(){
+  //   const emptyWords = document.querySelector('.empty-words')
+  //   if(noteBody.innerText === ''){
+  //     noteBody.innerText = emptyWords
+  //   }
+  // }
+
+   //const emptyWords = document.querySelector('.empty-words')
+   //emptyWords.style.display = 'block'
+  //if(noteBody.innerText === ''){
+  //if(emptyWords.style.display = 'block'){
+     // if(noteBody.innerText != ''){
+     //   emptyWords.style.display = 'none'
+     // }
+    //emptyWords.style.display = 'block';
+  //} //else {
+  //   emptyWords.style.display = 'none';
+  // }
+
   fetchingNotes()
 
   function fetchingNotes(){
@@ -74,6 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function noteToPage(note){
+    //emptyWords.style.display = 'none'
     noteBody.innerHTML = `
     <h2 class="note-title">${note.title}</h2>
       <p class="body-of-note">${note.body}</p>
@@ -83,10 +104,14 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function displayEditForm(e){
-    let title = document.querySelector('.note-title').innerText
-    let body = document.querySelector('.body-of-note').innerText
-    let noteId = parseInt(document.querySelector('.edt-btn').id)
+    // let title = document.querySelector('.note-title').innerText
+    // let body = document.querySelector('.body-of-note').innerText
+    // let noteId = parseInt(document.querySelector('.edt-btn').id)
     if(e.target.className === 'edt-btn'){
+      let title = document.querySelector('.note-title').innerText
+      let body = document.querySelector('.body-of-note').innerText
+      let noteId = parseInt(document.querySelector('.edt-btn').id)
+      
       inputForm.style.display = 'none';
       editForm.style.display = 'block';
       editForm.title.value = title
@@ -94,7 +119,29 @@ document.addEventListener('DOMContentLoaded', () => {
       editForm.id.value = noteId
     }
     if(e.target.className === 'dlt-btn'){
-      noteBody.innerText = '';
+      noteBody.innerText = ''
+      //placeHolder()
+
+      //let pageTags = e.target.parentElement.children
+      // let innerPageTags = Array.from(pageTags)
+      // innerPageTags.forEach(tag => {
+      //   if(tag.tagName === 'H2'){
+      //     tag.remove()
+      //   } else if (tag.tagName === 'P'){
+      //     tag.remove()
+      //   } else if (tag.tagName === 'BUTTON'){
+      //     tag.remove()
+      //   } else if (tag.tagName === 'DIV'){
+      //     noteBody.innerText = emptyWords;
+      //   }
+      // })
+      //emptyWords.style.display = 'block'
+      //debugger
+      // debugger
+      //   noteBody.innerHTML = emptyWords;
+
+      //noteBody.innerText = emptyWords
+      //emptyWords.style.display = 'block';
 
       let sidePs = sideNav.querySelectorAll('p')
       let arrPs = Array.from(sidePs)
@@ -138,9 +185,11 @@ document.addEventListener('DOMContentLoaded', () => {
     <h2 class="note-title">${updatedNote.title}</h2>
       <p class="body-of-note">${updatedNote.body}</p>
       <button id="${updatedNote.id}" class="edt-btn">Edit</button>
+      <button id="${updatedNote.id}" class="dlt-btn">Delete</button>
     `
     editForm.reset()
     editForm.style.display = 'none';
     inputForm.style.display = 'block';
   }
+
 })

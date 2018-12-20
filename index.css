@@ -18,7 +18,7 @@
 
 .note-body {
   height: 100%;
-  width: 695px;
+  width: 1280px;
   position: fixed;
   z-index: 1;
   top: 100;
@@ -31,10 +31,10 @@
 
 .input-form {
   top: 0;
-  width: 695px;
+  width: 1280px;
   position: relative;
   padding: 12px 20px;
-  margin: 8px 0;
+  /* margin: 8px 0; */
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -47,11 +47,11 @@
 
 .edit-form {
   top: 0;
-  width: 695px;
+  width: 1280px;
   position: relative;
   padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block; 
+  /* margin: 8px 0; */
+  display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
@@ -60,3 +60,18 @@
   z-index: 2;
   background-color: #ccffff;
 }
+
+/* .empty-words {
+  text-indent: 50px;
+  text-align: justify;
+  letter-spacing: 3px;
+  font-size: 75px;
+  /* display: block; */
+/*} 
+ /* [contentEditable=true]:empty:not(:focus):before{
+    content:attr(data-text)
+} */
+
+/* .hidden {
+  display: none;
+}  */
