@@ -1,0 +1,62 @@
+
+.titles {
+  color: white;
+}
+
+.sidenav {
+  height: 100%;
+  bottom: 0;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.note-body {
+  height: 100%;
+  width: 695px;
+  position: fixed;
+  z-index: 1;
+  top: 100;
+  margin-left: 250;
+  right: 0;
+  background-color:  #009999;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.input-form {
+  top: 0;
+  width: 695px;
+  position: relative;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  right: 0;
+  position: fixed;
+  z-index: 2;
+  background-color: #ccffff;
+}
+
+.edit-form {
+  top: 0;
+  width: 695px;
+  position: relative;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block; 
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  right: 0;
+  position: fixed;
+  z-index: 2;
+  background-color: #ccffff;
+}
